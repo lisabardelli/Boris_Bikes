@@ -1,7 +1,6 @@
 require "docking"
 
 describe DockingStation do
-  subject { DockingStation }
   it { is_expected.to respond_to :release_bike }
   #'should respond to :release_bike' do
     #expect(DockingStation).to respond_to(:release_bike)
@@ -14,7 +13,8 @@ describe DockingStation do
   it 'releases working bikes' do
     bike = subject.release_bike
     expect(bike).to be_working
-  end
 end
+end
+
   #it 'will release_bike when passed "release_bike"' do
     #expect(DockingStation.new).to respond_to(:release_bike)
