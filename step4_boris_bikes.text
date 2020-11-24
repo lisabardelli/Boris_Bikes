@@ -1,0 +1,5 @@
+Typo of error : NameError
+Error Path : /Users/lisa/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/irb-1.2.1/exe/irb
+Error Line ; 11
+Ruby Docs : Raised when a given name is invalid or undefined. We have not yet defined the DockingStation class
+How to solve: create a class 
