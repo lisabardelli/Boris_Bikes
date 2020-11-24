@@ -1,4 +1,8 @@
 class DockingStation
-def initialize
+  def initialize
 end
+
+def release
+end
+
 end
