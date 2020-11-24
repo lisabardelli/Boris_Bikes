@@ -1,9 +1,13 @@
+require_relative 'bike'
+
 class DockingStation
+  #attr_accessor :bike
   def initialize
+  #  @bike = bike
 
   end
-  def self.release_bike
-    :release_bike
+  def release_bike
+    Bike.new
 
   end
 end
