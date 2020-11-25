@@ -16,7 +16,11 @@ class DockingStation
 
   def dock(bike)
     bike = Bike.new
-    @bike_array << bike
+    if @bike_array.length >= 1
+      raise StandardError.new "This is an exception"
+    else
+      @bike_array << bike
+    end
   end
 
 end
