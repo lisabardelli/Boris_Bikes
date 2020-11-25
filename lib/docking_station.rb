@@ -7,11 +7,16 @@ class DockingStation
   end
 
   def release_bike
-    return Bike.new
+    if @bike_array.length > 0
+      return Bike.new
+    else
+      raise StandardError.new "This is an exception"
+    end
   end
 
-  def return_bike
-    @bike_array << Bike.new
+  def dock(bike)
+    bike = Bike.new
+    @bike_array << bike
   end
 
 end
