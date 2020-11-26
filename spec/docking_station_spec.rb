@@ -23,6 +23,15 @@ describe DockingStation do
     21.times {docking_station.dock}
     expect {docking_station.dock}.to raise_error 'station full'
   end
+
+  it 'checks that a new docking station take a capacity argument' do
+    expect(DockingStation).to respond_to(:new).with(1).argument
+  end
+
+  it 'checks that the default capacity is 20' do
+    ds = DockingStation.new 
+    expect(ds.default_capacity).to eq 20
+  end 
 end
 
 
