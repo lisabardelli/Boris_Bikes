@@ -20,7 +20,7 @@ describe DockingStation do
 
   it 'raises an error if the capacity(1) if full' do
     docking_station = DockingStation.new
-    docking_station.dock
+    21.times {docking_station.dock}
     expect {docking_station.dock}.to raise_error 'station full'
   end
 end
