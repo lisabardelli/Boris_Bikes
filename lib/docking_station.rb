@@ -12,6 +12,7 @@ class DockingStation
   end
 
   def dock
+    return fail 'station full' unless @station.length == 0
     @station.push(Bike.new)
   end
 end
