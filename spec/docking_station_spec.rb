@@ -31,7 +31,17 @@ describe DockingStation do
   it 'checks that the default capacity is 20' do
     ds = DockingStation.new 
     expect(ds.default_capacity).to eq 20
-  end 
+  end
+
+  it 'allows user to dock a broken bike' do
+    
+  end
+
+  it 'does not allow user to release a broken bike' do
+    
+  end
+
+  
 end
 
 
