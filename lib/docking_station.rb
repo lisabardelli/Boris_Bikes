@@ -27,3 +27,4 @@ class DockingStation
     return fail 'no bikes' unless @station.count > 0
   end
 end
+
