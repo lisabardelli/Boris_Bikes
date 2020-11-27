@@ -34,13 +34,10 @@ describe DockingStation do
   end
 
   it 'allows user to dock a broken bike' do
-    
+    subject = Bike.new
+    subject.report_broken
+    expect(subject).to be_broken
   end
-
-  it 'does not allow user to release a broken bike' do
-    
-  end
-
   
 end
 
