@@ -1,8 +1,7 @@
-require "docking"
-require "bike"
+require "./lib/docking.rb"
+# require "bike"
 
 describe DockingStation do
-
   it { is_expected.to respond_to :release_bike }
 
   describe '#dock' do
