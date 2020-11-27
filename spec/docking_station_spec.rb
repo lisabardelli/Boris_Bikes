@@ -3,8 +3,7 @@ require "../lib/docking_station"
 describe DockingStation do
   it { is_expected.to respond_to(:release_bike)} 
   
-  it 'gets a bike' do
-    subject = DockingStation.new
+  it 'allows a bike to be released' do
     subject.dock
     expect(subject.release_bike).to be_instance_of Bike
   end 
@@ -14,14 +13,12 @@ describe DockingStation do
   end
 
   it 'raises an error if station does not have bike' do
-    docking_station = DockingStation.new
-    expect {docking_station.release_bike}.to raise_error 'no bikes'
+    expect {subject.release_bike}.to raise_error 'no bikes'
   end
 
-  it 'raises an error if the capacity(1) if full' do
-    docking_station = DockingStation.new
-    21.times {docking_station.dock}
-    expect {docking_station.dock}.to raise_error 'station full'
+  it 'raises an error if the capacity(20) if full' do
+    20.times {subject.dock}
+    expect { subject.dock }.to raise_error 'station full'
   end
 
   it 'checks that a new docking station take a capacity argument' do
@@ -29,8 +26,7 @@ describe DockingStation do
   end
 
   it 'checks that the default capacity is 20' do
-    ds = DockingStation.new 
-    expect(ds.default_capacity).to eq 20
+    expect(subject.capacity).to eq 20
   end
 
   it 'allows user to dock a broken bike' do
